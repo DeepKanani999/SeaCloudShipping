@@ -1,17 +1,12 @@
 {
-  "name": "Somixa",
-  "short_name": "Somixa",
+  "name": "Sea-Cloud Shipping",
+  "short_name": "Sea-Cloud Shipping",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
   "orientation": "portrait",
   "icons": [
-    {
-      "src": "/assets/pwa/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
     {
       "src": "/assets/pwa/icon-48x48.png",
       "sizes": "48x48",

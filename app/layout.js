@@ -2,14 +2,14 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Ostro - Brave New Strength",
+  title: "Sea-Cloud Shipping - Destined Your Desires",
   description:
-    "Ostro offers high-performance tile adhesives designed for lasting strength, easy application, and superior bonding. Trusted by professionals for reliable results across all surfaces.",
+    "SeaCloud Shipping delivers reliable and efficient maritime logistics solutions worldwide. Trusted by global partners for safe cargo transport, timely delivery, and exceptional service across all sea routes.",
   manifest: "/manifest.json", // Path to the PWA manifest file
 };
 
 export const viewport = {
-  themeColor: "#B62025",
+  themeColor: "#00ADEE",
 };
 
 export default function RootLayout({ children }) {

@@ -15,32 +15,28 @@ import BottomTab from "@/components/BottomBar";
 import UserInfoPopup from "@/components/userDetailPopup";
 
 const heroImages = [
-  "/assets/images/Hero-Banner/ostro_hero_banner-1.jpg",
-  "/assets/images/Hero-Banner/ostro_hero_banner-2.jpg",
-  "/assets/images/Hero-Banner/ostro_hero_banner-3.jpg",
+  "/assets/images/Hero-Banner/sea-cloud-hero-banner-1.jpg",
+  "/assets/images/Hero-Banner/sea-cloud-hero-banner-2.jpg",
+  "/assets/images/Hero-Banner/sea-cloud-hero-banner-3.jpg",
 ];
 
 const populerSearches = [
-  "Best tile adhesive",
-  "Ostro adhesive reviews",
-  "Strongest tile glue",
-  "Waterproof tile adhesive",
-  "Wall vs floor adhesive",
-  "Ostro ceramic adhesive",
-  "Apply tile adhesive",
-  "Top adhesive brands",
-  "Heatproof tile glue",
-  "Fast-dry adhesive",
-  "Ostro vs competitors",
-  "Outdoor tile adhesive",
-  "Adhesive for marble/granite",
-  "Crackproof tile glue",
-  "Ostro adhesive price",
-  "Tile adhesive guide",
-  "Long-lasting adhesive",
-  "Cement vs ready-mix adhesive",
-  "Eco-friendly tile glue",
-  "Vertical tile bonding",
+  "Sea Cloud Shipping Services reviews",
+  "Best shipping company for bulk cargo",
+  "Sea Cloud freight tracking",
+  "Sea Cloud container shipping rates",
+  "Sea Cloud international routes",
+  "Sea Cloud Shipping vs competitors",
+  "Sea Cloud marine logistics",
+  "Top Ocean freight companies",
+  "Affordable Sea cargo services",
+  "Sea Cloud cargo insurance",
+  "Eco-friendly shipping services",
+  "Sea freight vs air freight",
+  "Sea Cloud customer testimonials",
+  "Sea Cloud ship schedule",
+  "Reliable shipping services for businesses",
+  "Door-to-port shipping Sea Cloud",
 ];
 
 const carouselSettings = {
@@ -129,30 +125,30 @@ export function SocialStoriesSection() {
 
 const faqs = [
   {
-    question: "What makes Ostro Tile Adhesive different from other brands?",
+    question: "What services does Sea Cloud Shipping offer?",
     answer:
-      "Ostro Tile Adhesive is engineered for superior bonding strength, long-lasting durability, and excellent workability—perfect for all types of tile installations.",
+      "Sea Cloud Shipping Services provides comprehensive maritime logistics, including container shipping, bulk cargo transport, freight forwarding, and customs clearance.",
   },
   {
-    question: "Where can Ostro Tile Adhesive be used?",
+    question: "Which destinations does Sea Cloud Shipping cover?",
     answer:
-      "Ostro is ideal for fixing ceramic, vitrified, porcelain, glass mosaic, natural stone, and large-format tiles on floors and walls—indoors and outdoors.",
+      "We offer domestic and international shipping across major ports worldwide, ensuring global reach with reliable transit schedules.",
+  },
+  {
+    question: "Can Sea Cloud handle both small and large shipments?",
+    answer:
+      "Yes, we manage shipments of all sizes—from small LCL (Less than Container Load) to full FCL (Full Container Load) and bulk cargo.",
+  },
+  {
+    question: "How do I track my shipment?",
+    answer:
+      "You can track your cargo in real-time through our online tracking portal using your unique shipment ID.",
   },
   {
     question:
-      "Is Ostro adhesive suitable for wet areas like bathrooms and kitchens?",
+      "Does Sea Cloud Shipping handle documentation and customs clearance?",
     answer:
-      "Yes, Ostro offers water-resistant adhesives specifically designed for wet and high-moisture areas such as bathrooms, kitchens, and swimming pools.",
-  },
-  {
-    question: "How long does it take for Ostro Tile Adhesive to set?",
-    answer:
-      "Typically, it takes 24 hours for full curing, but initial setting begins within 4–6 hours depending on environmental conditions.",
-  },
-  {
-    question: "Can Ostro adhesive be used on existing tiles?",
-    answer:
-      "Yes, with the right surface preparation and a suitable Ostro product, you can tile over existing tiles securely.",
+      "Absolutely. We offer end-to-end logistics, including all required paperwork, customs clearance, and regulatory compliance.",
   },
 ];
 
@@ -179,7 +175,7 @@ export function FAQSection() {
               onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
             >
               <span className="flex-1">{faq.question}</span>
-              <span className="text-3xl ml-4" style={{ color: "#B62025" }}>
+              <span className="text-3xl ml-4" style={{ color: "#00ADEE" }}>
                 {openIndex === idx ? "−" : "+"}
               </span>
             </button>
@@ -203,6 +199,42 @@ const HomeScreen = () => {
   const [visible, setVisible] = useState(true);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      // Intercept the event and store it
+      e.preventDefault();
+      setDeferredPrompt(e);
+      console.log("✅ beforeinstallprompt event captured");
+    };
+
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleAddToHomeScreen = async () => {
+    if (!deferredPrompt) {
+      console.log("⚠️ Install prompt not available");
+      return;
+    }
+
+    // Show the prompt
+    deferredPrompt.prompt();
+
+    const result = await deferredPrompt.userChoice;
+    console.log("👉 User response:", result.outcome);
+
+    if (result.outcome === "accepted") {
+      console.log("✅ User accepted the install prompt");
+    } else {
+      console.log("❌ User dismissed the install prompt");
+    }
+
+    // Clear the saved prompt since it can't be used again
+    setDeferredPrompt(null);
+  };
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -265,16 +297,16 @@ const HomeScreen = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919942500600"; // Replace with your number
-    const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
+    const phoneNumber = "918200397854"; // Replace with your number
+    const defaultMessage = `Hi, I'm interested in your services. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
     window.open(
@@ -284,7 +316,7 @@ const HomeScreen = () => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
+    window.location.href = "mailto: info@seacloudshipping.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -318,15 +350,15 @@ const HomeScreen = () => {
   const getPrice = (product) => {
     const userInfo = sessionStorage.getItem("userInfo");
     if (isMobile) {
-      const phoneNumber = "919942500600";
-      const imageUrl = `https://www.ostrocemex.com/${product?.image}`;
+      const phoneNumber = "918200397854";
+      const imageUrl = `https://www.seacloudshipping.com/${product?.image}`;
 
       // Create a message with product details and image URL
       const message = `*Product Inquiry*
 
   ${imageUrl}
   
-  *Product Details:*
+  *service Details:*
   • Name: ${product?.name}
   • Description: ${product?.detail}
 
@@ -340,7 +372,6 @@ const HomeScreen = () => {
   • Current price
   • Availability
   • Delivery options
-  • Warranty details
   
   Thank you!`;
 
@@ -351,15 +382,15 @@ const HomeScreen = () => {
       if (!userInfo) {
         setIsPopupOpen(true); // Open the popup if session data is not available
       } else {
-        const phoneNumber = "919942500600";
-        const imageUrl = `https://www.ostrocemex.com/${product?.image}`;
+        const phoneNumber = "918200397854";
+        const imageUrl = `https://www.seacloudshipping.com/${product?.image}`;
 
         // Create a message with product details and image URL
         const message = `*Product Inquiry*
 
   ${imageUrl}
   
-  *Product Details:*
+  *service Details:*
   • Name: ${product?.name}
   • Description: ${product?.detail}
 
@@ -373,7 +404,6 @@ const HomeScreen = () => {
   • Current price
   • Availability
   • Delivery options
-  • Warranty details
   
   Thank you!`;
 
@@ -618,7 +648,7 @@ const HomeScreen = () => {
           <button
             onClick={() =>
               // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
-              window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank")
+              window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank")
             }
             style={{
               padding: "8px 95px",
@@ -1064,7 +1094,7 @@ const HomeScreen = () => {
                       //   "_blank"
                       // )
                       window.open(
-                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                        "https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19",
                         "_blank"
                       )
                     }
@@ -1250,7 +1280,7 @@ const HomeScreen = () => {
 
                 {/* Share */}
                 <button
-                  onClick={handleShare}
+                  onClick={handleAddToHomeScreen}
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -1307,14 +1337,18 @@ const HomeScreen = () => {
                       </div>
                     </div>
                   </div>
-                  <h3 className="title">{`At OSTRO, we’re building the future—one tile at a time.`}</h3>
+                  <h3 className="title">{`At Sea-Cloud Shipping, we’re navigating the future`}</h3>
                   <p>
-                    Founded with a vision to revolutionize the surface finishing
-                    and bonding industry, OSTRO stands at the forefront of tile
-                    chemical innovation. From tile adhesives and grouts to
-                    waterproofing compounds and surface cleaners, we provide
-                    high-performance solutions that bring unmatched durability,
-                    resilience, and beauty to every surface.
+                    Sea-Cloud Shipping Services is an Authorized Customs
+                    Broker’s licensed firm specializing in port and customs
+                    clearances under the Customs Act & also provide expert
+                    advice on all legal matters related to port/customs and
+                    other allied laws. Its emerging as an Authorized Customs
+                    Broker for Sea & Air Cargo Clearance, International freight
+                    forwarder and Shipping Agents for all types of Ships &
+                    support services. With wide experience of 25 Years serving
+                    under banner of H K Dave Ltd, Sical Logistics Ltd & J M Baxi
+                    Group for long term establishment vision.
                   </p>
                   <div className="row">
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1322,12 +1356,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>🌍</span>
                         </div>
                         <div className="info">
-                          <h6>New Bonding Formula</h6>
+                          <h6>Global Reach, Local Expertise</h6>
                         </div>
                       </div>
                     </div>
@@ -1336,12 +1370,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-volume"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>✅</span>
                         </div>
                         <div className="info">
-                          <h6>Crystal Finish Compatibility</h6>
+                          <h6>Transparent Pricing, Trusted Delivery</h6>
                         </div>
                       </div>
                     </div>
@@ -1350,12 +1384,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>🔄</span>
                         </div>
                         <div className="info">
-                          <h6>Strong on Every Surface</h6>
+                          <h6>End-to-End Efficiency</h6>
                         </div>
                       </div>
                     </div>
@@ -1364,12 +1398,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>🤝</span>
                         </div>
                         <div className="info">
-                          <h6>Dual Compatibility – Floor & Wall</h6>
+                          <h6>Built on Trust, Driven by Excellence</h6>
                         </div>
                       </div>
                     </div>
@@ -1378,12 +1412,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-volume"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>📦</span>
                         </div>
                         <div className="info">
-                          <h6>Smart Application Technology</h6>
+                          <h6>Smart Shipping Solutions</h6>
                         </div>
                       </div>
                     </div>
@@ -1392,26 +1426,31 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#B62025" }}
+                            style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <span style={{ fontSize: "25px" }}>🚛</span>
                         </div>
                         <div className="info">
-                          <h6>New Strength, Every Tile.</h6>
+                          <h6>Consistent Care, Every Container</h6>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p>
-                    With a strong commitment to quality and reliability, OSTRO
-                    is trusted by architects, contractors, retailers, and
-                    homeowners across the country. Our products are engineered
-                    to withstand the test of time, weather, and wear—so your
-                    spaces stay stunning and structurally sound.
+                    We will continue to provide clients with professional,
+                    reliable and competitive services in a spirit of mutual
+                    benefit and relentlessly elevate these services to a level
+                    to keep us with their rising expectations in a customized
+                    manner. <br />
+                    <br /> Sea-Cloud is omnipresent but to list the few of our
+                    business places of operation are Gujarat ports and having
+                    associates at other Ports & Airports of India. <br />
+                    <br /> We trust you will grant us an opportunity to prove
+                    our commitments and oblige.
                     <a
                       href="/about"
                       style={{
-                        color: "#B62025",
+                        color: "#00ADEE",
                         cursor: "pointer",
                         fontSize: "15px",
                         whiteSpace: "nowrap",
@@ -1441,7 +1480,10 @@ const HomeScreen = () => {
                             alignItems: "center",
                             justifyContent: "center",
                             display: "flex",
-                            height: "400px",
+                            // height: "400px",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain",
                           }}
                         >
                           <Link href={`/product-details/${product.slug}`}>
@@ -1459,16 +1501,21 @@ const HomeScreen = () => {
                           </span>
                         </div>
                         <div className="listing-content">
-                          <h3 className="title">
-                            <Link href={`/product-details/${product.slug}`}>
+                          <h5
+                            className="title"
+                            style={{ marginBottom: "15px" }}
+                          >
+                            <Link
+                              href={`/product-details/${product.slug}`}
+                            >
                               {product.name}
                             </Link>
-                          </h3>
+                          </h5>
                           <p
                             style={{
                               display: "-webkit-box",
                               WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 5,
+                              WebkitLineClamp: 4,
                               overflow: "hidden",
                               textOverflow: "ellipsis",
                               maxWidth: "300px",
@@ -1665,7 +1712,7 @@ const HomeScreen = () => {
                           if (!userInfo) {
                             setIsPopupOpen(true); // Open the popup if session data is not available
                           } else {
-                            const phoneNumber = "919942500600"; // Replace with your retailer's WhatsApp number
+                            const phoneNumber = "918200397854"; // Replace with your retailer's WhatsApp number
                             const message = `${requirementInput}`;
                             const encodedMessage = encodeURIComponent(message);
                             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -1682,7 +1729,7 @@ const HomeScreen = () => {
                     >
                       Or connect with seller instantly
                       <a
-                        href="tel: 9942500600"
+                        href="tel: 8200397854"
                         className="text-decoration-none ms-1"
                       >
                         <strong
@@ -1758,7 +1805,7 @@ const HomeScreen = () => {
                               style={{
                                 height: "20px",
                                 width: "20px",
-                                marginTop: "1px",
+                                marginTop: "4px",
                                 marginLeft: "2px",
                               }}
                             />
@@ -1812,7 +1859,7 @@ const HomeScreen = () => {
                               style={{
                                 height: "20px",
                                 width: "20px",
-                                marginTop: "1px",
+                                marginTop: "4px",
                                 marginLeft: "2px",
                               }}
                             />
@@ -1866,7 +1913,7 @@ const HomeScreen = () => {
                               style={{
                                 height: "20px",
                                 width: "20px",
-                                marginTop: "1px",
+                                marginTop: "4px",
                                 marginLeft: "2px",
                               }}
                             />
@@ -1893,7 +1940,7 @@ const HomeScreen = () => {
                     onClick={() =>
                       // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
                       window.open(
-                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                        "https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19",
                         "_blank"
                       )
                     }

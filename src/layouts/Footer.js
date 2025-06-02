@@ -5,17 +5,11 @@ import React, { useEffect, useState } from "react";
 const Footer = () => {
   const [writtenMessage, setWrittenMessage] = useState("");
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -184,10 +178,10 @@ const Footer = () => {
                         </span>
                         <h6 className="title">
                           <Link href="#" style={{ color: "#fff" }}>
-                            "Discover powerful Ostro tile adhesive that
-                            strengthens every bond, ensures lasting durability,
-                            and delivers unmatched performance for every tile
-                            installation."
+                            "Experience reliable Sea-Cloud Shipping that connects
+                            every destination, ensures secure delivery, and
+                            provides unmatched efficiency across sea and air
+                            logistics."
                           </Link>
                         </h6>
                       </div>
@@ -256,7 +250,7 @@ const Footer = () => {
                         onClick={() => {
                           const userInfo = sessionStorage.getItem("userInfo");
                           if (isMobile) {
-                            const phoneNumber = "919375719988"; // Replace with your retailer's WhatsApp number
+                            const phoneNumber = "918200397854"; // Replace with your retailer's WhatsApp number
                             const message = writtenMessage;
                             const encodedMessage = encodeURIComponent(message);
                             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -265,7 +259,7 @@ const Footer = () => {
                             if (!userInfo) {
                               setIsPopupOpen(true); // Open the popup if session data is not available
                             } else {
-                              const phoneNumber = "919375719988"; // Replace with your retailer's WhatsApp number
+                              const phoneNumber = "918200397854"; // Replace with your retailer's WhatsApp number
                               const message = writtenMessage;
                               const encodedMessage =
                                 encodeURIComponent(message);

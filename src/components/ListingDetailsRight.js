@@ -4,6 +4,7 @@ import UserInfoPopup from "./userDetailPopup";
 const ListingDetailsRight = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [error, setError] = useState("");
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const [isMobile, setIsMobile] = useState(false);
@@ -48,7 +49,7 @@ const ListingDetailsRight = () => {
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
 
   const handleMail = () => {
@@ -56,7 +57,7 @@ const ListingDetailsRight = () => {
     const body = encodeURIComponent(
       "Hello, I am interested in your products. Please share more details."
     );
-    window.location.href = `mailto:ostrocemex@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto: info@seacloudshipping.com?subject=${subject}&body=${body}`;
   };
 
   const handleShare = async () => {
@@ -72,6 +73,22 @@ const ListingDetailsRight = () => {
       }
     } catch (error) {
       console.error("Share failed:", error);
+    }
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+
+    // Allow only digits
+    if (/^\d*$/.test(value)) {
+      setNumber(value);
+
+      // Optional: simple validation for 10-digit number
+      if (value.length > 0 && value.length !== 10) {
+        setError("Mobile number must be 10 digits");
+      } else {
+        setError("");
+      }
     }
   };
 
@@ -109,26 +126,27 @@ const ListingDetailsRight = () => {
             }}
           >
             <i className="ti-book" />
-            <h3>Discover Our Premium Tile Adhesive Variants</h3>
+            <h3>Explore Our Reliable Shipping Solutions</h3>
             <a
               onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/assets/images/Ostro-Company Profile.pdf";
-                link.target = "_blank"; // Open in a new tab
-                link.rel = "noopener noreferrer"; // Security best practice
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                // const link = document.createElement("a");
+                // link.href = "/assets/images/Ostro-Company Profile.pdf";
+                // link.target = "_blank"; // Open in a new tab
+                // link.rel = "noopener noreferrer"; // Security best practice
+                // document.body.appendChild(link);
+                // link.click();
+                // document.body.removeChild(link);
               }}
               className="main-btn"
               style={{
                 display: "inline-block",
                 padding: "10px 20px",
-                backgroundColor: "#B62025",
+                backgroundColor: "#00ADEE",
                 color: "#FFF",
                 textDecoration: "none",
                 borderRadius: "5px",
                 marginTop: "10px",
+                cursor: "pointer",
               }}
             >
               View Catalogue
@@ -138,11 +156,11 @@ const ListingDetailsRight = () => {
 
         <div className="widget reservation-form-widget mb-30 wow fadeInUp">
           <h5 className="widget-title">
-            Explore Our Complete Range of Ostro Tile Adhesives
+            Explore Our Full Range of SeaCloud Shipping Solutions
           </h5>
           <span style={{ marginBottom: "10px", marginTop: "10px" }}>
-            Discover premium tile bonding strength and pricing crafted for your
-            needs — absolutely free.
+            Discover reliable global shipping solutions and competitive pricing
+            tailored to your needs — with no hidden costs.
           </span>
           <form onSubmit={(e) => e.preventDefault()}>
             <div className="form_group">
@@ -157,14 +175,16 @@ const ListingDetailsRight = () => {
               />
 
               <input
-                type="number"
+                type="tel"
                 className="form_control"
                 placeholder="Mobile Number"
-                name="numbber"
+                name="number"
                 required=""
                 value={number}
-                onChange={(e) => setNumber(e.target.value)}
+                onChange={handleChange}
+                maxLength={10}
               />
+              {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
             </div>
             <div className="form_group">
               <button
@@ -172,8 +192,8 @@ const ListingDetailsRight = () => {
                 onClick={() => {
                   const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
                   if (isMobile) {
-                    const phoneNumber = "919942500600"; // Replace with your WhatsApp number (in international format without '+')
-                    const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Somixa Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                    const phoneNumber = "918200397854"; // Replace with your WhatsApp number (in international format without '+')
+                    const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your shipping and logistics services at Sea-Cloud Shipping Company. I would appreciate a consultation to understand how your solutions can enhance the efficiency and reliability of our supply chain operations.`;
                     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                       message
                     )}`;
@@ -184,8 +204,8 @@ const ListingDetailsRight = () => {
                     if (!userInfo) {
                       setIsPopupOpen(true); // Open the popup if session data is not available
                     } else {
-                      const phoneNumber = "919942500600"; // Replace with your WhatsApp number (in international format without '+')
-                      const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                      const phoneNumber = "918200397854"; // Replace with your WhatsApp number (in international format without '+')
+                      const message = `Hello, I'm ${name}, and my contact number is ${number}. I'm interested in learning more about your shipping services and would appreciate a consultation to understand how Sea-Cloud can support our logistics needs with efficiency and reliability.`;
                       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                         message
                       )}`;
@@ -196,7 +216,7 @@ const ListingDetailsRight = () => {
                   }
                 }}
               >
-                Adhesive Selector Guide
+                Logistics Solution Finder
               </button>
             </div>
           </form>
@@ -204,9 +224,9 @@ const ListingDetailsRight = () => {
         <div className="widget contact-info-widget mb-30 wow fadeInUp">
           <div className="contact-info-widget-wrap">
             <div className="contact-map">
-              <iframe src="https://maps.google.com/maps?q=Jaspur,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+              <iframe src="https://maps.google.com/maps?q=Rajula,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" />
               <a
-                href="https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9"
+                href="https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19"
                 className="support-icon"
               >
                 {/* <i className="ti-location-pin" /> */}
@@ -229,7 +249,7 @@ const ListingDetailsRight = () => {
                     alt="WhatsApp"
                     style={{ width: "17px", height: "17px" }}
                   />
-                  <a href="tel:+919942500600">+91 9942500600</a>
+                  <a href="tel:+918200397854">+91 8200397854</a>
                 </p>
                 <hr className="my-2 opacity-25" />
               </div>
@@ -244,9 +264,9 @@ const ListingDetailsRight = () => {
                   />
                   <a
                     style={{ fontSize: "16px" }}
-                    href="mailto:ostrocemex@gmail.com"
+                    href="mailto: info@seacloudshipping.com"
                   >
-                    ostrocemex@gmail.com
+                    info@seacloudshipping.com
                   </a>
                 </p>
                 <hr className="my-2 opacity-25" />
@@ -255,8 +275,9 @@ const ListingDetailsRight = () => {
                 <h5 className="widget-title my-2">Address</h5>
                 <p className="mx-2">
                   <a>
-                    FP No - 274, TP No - 229, Nr. Shilpgram I, Gate No - 2,
-                    Jaspur, Kalol, Gandhinagar, 382721. Gujarat
+                    Block No.16, Siddhivinayak, Shikshak Society, Nr.Dharnath
+                    Temple, At Rajula – 365560 Dist : Amreli, Gujarat State,
+                    India.
                   </a>
                   <button
                     className="btn p-0 text-decoration-none d-flex align-items-center"
@@ -282,8 +303,8 @@ const ListingDetailsRight = () => {
                   onClick={() => {
                     const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
                     if (isMobile) {
-                      const whatsappNumber = "919942500600"; // WhatsApp number in international format (without '+')
-                      const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Somixa Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                      const whatsappNumber = "918200397854"; // WhatsApp number in international format (without '+')
+                      const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your shipping and logistics services at Sea-Cloud Shipping Company. I would appreciate a consultation to understand how your solutions can enhance the efficiency and reliability of our supply chain operations.`;
 
                       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                         enquiryMessage
@@ -299,8 +320,8 @@ const ListingDetailsRight = () => {
                       if (!userInfo) {
                         setIsPopupOpen(true); // Open the popup if session data is not available
                       } else {
-                        const whatsappNumber = "919942500600"; // WhatsApp number in international format (without '+')
-                        const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                        const whatsappNumber = "918200397854"; // WhatsApp number in international format (without '+')
+                        const enquiryMessage = `Hello, I'm ${name}, and my contact number is ${number}. I'm interested in learning more about your shipping services and would appreciate a consultation to understand how Sea-Cloud can support our logistics needs with efficiency and reliability.`;
 
                         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                           enquiryMessage
@@ -373,9 +394,9 @@ const ListingDetailsRight = () => {
                     //   "_blank"
                     // );
                     window.open(
-                      "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                      "https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19",
                       "_blank"
-                    )
+                    );
                   }}
                 >
                   <div className="flex items-center bg-transparent rounded-lg hover:bg-gray-100 transition">
@@ -435,67 +456,49 @@ const ListingDetailsRight = () => {
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            TileGrip Pro
+            Core Shipping Services
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            Adhezo
+            Global Network
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            Fixora
+            Automated Notifications & Alerts
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            TileLock
+            Real-Time Shipment Tracking
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            GripStone
+            Multilingual Customer Support
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            StrongHold
+            Cargo Security & Safety Measures
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            TileFixx
+            Security & Compliance
           </span>
           <span
             style={{ borderRadius: "20px" }}
             className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
           >
-            StickTuff
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            Adhero
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            MegaBond
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            GripXpert
+            Customized Shipping Solutions
           </span>
         </div>
       </div>

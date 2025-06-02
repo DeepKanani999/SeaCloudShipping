@@ -70,16 +70,16 @@ const ProductDetailsClient = ({ item }) => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919942500600"; // Replace with your number
-    const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
+    const phoneNumber = "918200397854"; // Replace with your number
+    const defaultMessage = `Hi, I'm interested in your services. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
     window.open(
@@ -89,21 +89,15 @@ const ProductDetailsClient = ({ item }) => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
+    window.location.href = "mailto: info@seacloudshipping.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -153,15 +147,15 @@ const ProductDetailsClient = ({ item }) => {
 
     const userInfo = sessionStorage.getItem("userInfo");
     if (isMobile) {
-      const phoneNumber = "919942500600";
-      const imageUrl = `https://www.ostrocemex.com/${item?.image}`;
+      const phoneNumber = "918200397854";
+      const imageUrl = `https://www.seacloudshipping.com/${item?.image}`;
 
       // Create a message with product details and image URL
       const message = `*Product Inquiry*
 
   ${imageUrl}
   
-  *Product Details:*
+  *Service Details:*
   • Name: ${item?.name}
   • Description: ${item?.detail}
 
@@ -175,7 +169,6 @@ const ProductDetailsClient = ({ item }) => {
   • Current price
   • Availability
   • Delivery options
-  • Warranty details
   
   Thank you!`;
 
@@ -186,15 +179,15 @@ const ProductDetailsClient = ({ item }) => {
       if (!userInfo) {
         setIsPopupOpen(true);
       } else {
-        const phoneNumber = "919942500600";
-        const imageUrl = `https://www.ostrocemex.com/${item?.image}`;
+        const phoneNumber = "918200397854";
+        const imageUrl = `https://www.seacloudshipping.com${item?.image}`;
 
         // Create a message with product details and image URL
         const message = `*Product Inquiry*
 
   ${imageUrl}
   
-  *Product Details:*
+  *Service Details:*
   • Name: ${item?.name}
   • Description: ${item?.detail}
 
@@ -208,7 +201,6 @@ const ProductDetailsClient = ({ item }) => {
   • Current price
   • Availability
   • Delivery options
-  • Warranty details
   
   Thank you!`;
 
@@ -416,43 +408,35 @@ const ProductDetailsClient = ({ item }) => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div
-                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
+                  <img
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </button>
+                <button
+                  className="social-rounded-btn"
+                  onClick={handleInstagram}
                 >
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleFacebook}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Facebook.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleInstagram}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Instagram.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleLinkedIn}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Linkedin.svg"
-                      alt="LinkedIn"
-                    />
-                  </button>
-                  <button className="social-rounded-btn" onClick={handleShare}>
-                    <img
-                      src="/assets/images/social-media-icons/Share.svg"
-                      alt="Share"
-                    />
-                  </button>
-                </div>
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -476,7 +460,7 @@ const ProductDetailsClient = ({ item }) => {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: item?.backgroundColor || "#fff",
+                  // backgroundColor: item?.backgroundColor || "#fff",
                   borderRadius: "10px",
                   // padding: "20px",
                 }}
@@ -485,7 +469,7 @@ const ProductDetailsClient = ({ item }) => {
                   src={item?.image}
                   alt={item?.name || "Product Image"}
                   style={{
-                    width: "350px",
+                    width: "500px",
                     height: "auto",
                     objectFit: "contain",
                     borderRadius: "10px",
@@ -669,7 +653,7 @@ const ProductDetailsClient = ({ item }) => {
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-1.jpg"
+                                src="/assets/images/testimonial/feedback-user-1.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -708,7 +692,7 @@ const ProductDetailsClient = ({ item }) => {
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-2.jpg"
+                                src="/assets/images/testimonial/feedback-user-2.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -746,7 +730,28 @@ const ProductDetailsClient = ({ item }) => {
                           </li>
                         </ul>
                       </div>
-                      <div className="products-review-form">
+                      <div
+                        style={{
+                          justifyContent: "center",
+                          alignItems: "center",
+                          display: "flex",
+                          marginBottom: "50px",
+                        }}
+                      >
+                        <button
+                          className="main-btn"
+                          onClick={() =>
+                            // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+                            window.open(
+                              "https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19",
+                              "_blank"
+                            )
+                          }
+                        >
+                          Give Us a Review
+                        </button>
+                      </div>
+                      {/* <div className="products-review-form">
                         <h4 className="title">Leave Your Reviews</h4>
                         <form onSubmit={(e) => e.preventDefault()}>
                           <div className="row">
@@ -812,7 +817,7 @@ const ProductDetailsClient = ({ item }) => {
                             </div>
                           </div>
                         </form>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>
@@ -845,7 +850,10 @@ const ProductDetailsClient = ({ item }) => {
                       alignItems: "center",
                       justifyContent: "center",
                       display: "flex",
-                      height: "400px",
+                      // height: "400px",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
                     }}
                   >
                     <Link href={`/product-details/${item.slug}`}>
@@ -875,7 +883,7 @@ const ProductDetailsClient = ({ item }) => {
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 5,
+                        WebkitLineClamp: 4,
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         maxWidth: "300px",
@@ -908,18 +916,18 @@ const ProductDetailsClient = ({ item }) => {
                               className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
                               style={{
                                 backgroundColor: "#FFF",
-                                border: "1px solid #B62025",
-                                borderColor: "#B62025",
+                                border: "1px solid #00ADEE",
+                                borderColor: "#00ADEE",
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                width: "100%",
+                                // width: "100%",
                               }}
                             >
                               <span
                                 className="underline"
-                                style={{ fontSize: "18px", color: "#B62025" }}
+                                style={{ fontSize: "18px", color: "#00ADEE" }}
                               >
                                 View Details
                               </span>

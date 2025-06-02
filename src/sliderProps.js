@@ -152,11 +152,11 @@ export const GallerySlider2 = {
   slidesToScroll: 1,
 };
 export const reletedListingSlider2 = {
-  dots: true,
+  dots: false,
   arrows: false,
   infinite: true,
-  autoplaySpeed: 1500,
-  autoplay: false,
+  autoplaySpeed: 3000,
+  autoplay: true,
   slidesToShow: 2,
   slidesToScroll: 1,
 

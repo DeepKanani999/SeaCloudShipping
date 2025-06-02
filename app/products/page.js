@@ -30,19 +30,19 @@ const Products = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919942500600", "_blank"); // Replace with your number
+    window.open("https://wa.me/918200397854", "_blank"); // Replace with your number
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
+    window.location.href = "mailto: info@seacloudshipping.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -109,7 +109,6 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-
     let lastScrollTop = 0;
     const handleScroll = () => {
       const st = window.scrollY || document.documentElement.scrollTop;
@@ -161,7 +160,7 @@ const Products = () => {
           <UserInfoPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
         </div>
       )}
-      <PageBanner title={"Products"} />
+      <PageBanner title={"Services"} />
       <section className="products-area pt-120 pb-120">
         <div
           className={`floating-social-bar ${showBar ? "visible" : ""}`}
@@ -335,43 +334,35 @@ const Products = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div
-                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
+                  <img
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </button>
+                <button
+                  className="social-rounded-btn"
+                  onClick={handleInstagram}
                 >
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleFacebook}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Facebook.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleInstagram}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Instagram.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleLinkedIn}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Linkedin.svg"
-                      alt="LinkedIn"
-                    />
-                  </button>
-                  <button className="social-rounded-btn" onClick={handleShare}>
-                    <img
-                      src="/assets/images/social-media-icons/Share.svg"
-                      alt="Share"
-                    />
-                  </button>
-                </div>
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -635,14 +626,18 @@ const Products = () => {
             <div
               className="row"
               style={{
-                justifyContent: "center",
-                alignItems: "center",
-                display: "flex",
+                // justifyContent: "center",
+                // alignItems: "center",
+                // display: "flex",
               }}
             >
               {products.map((val) => {
                 return (
-                  <div className="col-lg-4 col-md-6 col-sm-12" key={val.slug}>
+                  <div
+                    className="col-lg-4 col-md-6 col-sm-12"
+                    key={val.slug}
+                    style={{ marginBottom: "20px" }}
+                  >
                     <div className="listing-item listing-grid-item-two">
                       <div
                         className="listing-thumbnail"
@@ -653,7 +648,10 @@ const Products = () => {
                           alignItems: "center",
                           justifyContent: "center",
                           display: "flex",
-                          height: "400px",
+                          // height: "400px",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "contain",
                         }}
                       >
                         <Link href={`/product-details/${val.slug}`}>
@@ -664,22 +662,26 @@ const Products = () => {
                         </Link>
                         <span
                           className="featured-btn"
-                          style={{ borderRadius: "5px", fontSize:"10px", padding:"3px 10px" }}
+                          style={{
+                            borderRadius: "5px",
+                            fontSize: "10px",
+                            padding: "3px 10px",
+                          }}
                         >
                           Featured
                         </span>
                       </div>
                       <div className="listing-content">
-                        <h3 className="title">
+                        <h5 className="title" style={{ marginBottom: "15px" }}>
                           <Link href={`/product-details/${val.slug}`}>
                             {val.name}
                           </Link>{" "}
-                        </h3>
+                        </h5>
                         <p
                           style={{
                             display: "-webkit-box",
                             WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 5,
+                            WebkitLineClamp: 4,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             maxWidth: "300px",
@@ -726,8 +728,8 @@ const Products = () => {
                                   className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
                                   style={{
                                     backgroundColor: "#FFF",
-                                    border: "1px solid #B62025",
-                                    borderColor: "#B62025",
+                                    border: "1px solid #00ADEE",
+                                    borderColor: "#00ADEE",
                                     display: "flex",
                                     flexDirection: "row",
                                     alignItems: "center",
@@ -737,7 +739,10 @@ const Products = () => {
                                 >
                                   <span
                                     className="underline"
-                                    style={{ fontSize: "18px", color:"#B62025" }}
+                                    style={{
+                                      fontSize: "18px",
+                                      color: "#00ADEE",
+                                    }}
                                   >
                                     View Details
                                   </span>

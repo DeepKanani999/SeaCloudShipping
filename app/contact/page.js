@@ -63,33 +63,27 @@ const Contact = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919942500600", "_blank"); // Replace with your number
+    window.open("https://wa.me/918200397854", "_blank"); // Replace with your number
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
+    window.location.href = "mailto: info@seacloudshipping.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -144,7 +138,7 @@ const Contact = () => {
 
         // Construct the mailto link
         const body = `First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-        const mailtoLink = `mailto:decorafurniture@gmail.com?subject=${encodeURIComponent(
+        const mailtoLink = `mailto:seacloudshipping.com?subject=${encodeURIComponent(
           subject
         )}&body=${body}`;
 
@@ -167,7 +161,7 @@ const Contact = () => {
 
       // Construct the mailto link
       const body = `First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-      const mailtoLink = `mailto:decorafurniture@gmail.com?subject=${encodeURIComponent(
+      const mailtoLink = `mailto:seacloudshipping.com?subject=${encodeURIComponent(
         subject
       )}&body=${body}`;
 
@@ -431,8 +425,9 @@ const Contact = () => {
                   <div className="info">
                     <h5>Address</h5>
                     <p>
-                      FP No - 274, TP No - 229, Nr. Shilpgram I, Gate No - 2,
-                      Jaspur, Kalol, Gandhinagar, 382721. Gujarat
+                      Block No.16, Siddhivinayak, Shikshak Society, Nr.Dharnath
+                      Temple, At Rajula – 365560 Dist : Amreli, Gujarat State,
+                      India.
                     </p>
                   </div>
                 </div>
@@ -443,7 +438,7 @@ const Contact = () => {
                   <div className="info">
                     <h5>Phone</h5>
                     <p>
-                      <a href="tel:+91 9942500600">+91 9942500600</a>
+                      <a href="tel:+91 8200397854">+91 8200397854</a>
                     </p>
                   </div>
                 </div>
@@ -454,8 +449,8 @@ const Contact = () => {
                   <div className="info">
                     <h5>Email</h5>
                     <p>
-                      <a href="mailto:ostrocemex@gmail.com">
-                        ostrocemex@gmail.com
+                      <a href="mailto: info@seacloudshipping.com">
+                        info@seacloudshipping.com
                       </a>
                     </p>
                   </div>
@@ -556,7 +551,7 @@ const Contact = () => {
       {/*====== Start Map section ======*/}
       <div className="contact-page-map">
         <div className="map-box">
-          <iframe src="https://maps.google.com/maps?q=Jaspur,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+          <iframe src="https://maps.google.com/maps?q=Rajula,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" />
         </div>
       </div>
       {/*====== End Map section ======*/}

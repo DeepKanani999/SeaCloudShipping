@@ -63,15 +63,15 @@ const PrivacyPolicy = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
   const handleWhatsApp = () => {
-    const phoneNumber = "919942500600"; // Replace with your number
-    const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
+    const phoneNumber = "918200397854"; // Replace with your number
+    const defaultMessage = `Hi, I'm interested in your services. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
     window.open(
@@ -998,10 +998,10 @@ const PrivacyPolicy = () => {
               <li>
                 By email:{" "}
                 <a
-                  href="mailto:ostrocemex@gmail.com"
+                  href="mailto: info@seacloudshipping.com"
                   style={{ color: "#007bff" }}
                 >
-                  ostrocemex@gmail.com
+                   info@seacloudshipping.com
                 </a>
               </li>
             </ul>

@@ -66,14 +66,14 @@ const About = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919942500600"; // Replace with your number
+    window.location.href = "tel:+918200397854"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
+    window.open("https://maps.app.goo.gl/oW5k4Sjo3cM1GAZ19", "_blank");
   };
   const handleWhatsApp = () => {
-    const phoneNumber = "919942500600"; // Replace with your number
+    const phoneNumber = "918200397854"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -84,21 +84,15 @@ const About = () => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
+    window.location.href = "mailto: info@seacloudshipping.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -378,7 +372,7 @@ const About = () => {
               <div className="col-lg-6">
                 <div className="section-title text-center mb-60 wow fadeInUp">
                   <span className="sub-title">Some Feature</span>
-                  <h2>Top Reasons To Use Ostro Adhesives</h2>
+                  <h2>Top Reasons to Choose Sea Clouds Shipping Service</h2>
                 </div>
               </div>
             </div>
@@ -392,12 +386,11 @@ const About = () => {
                     <i className="flaticon-add-user" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Unmatched Bonding Strength</h3>
+                    <h3 className="title">Flexible Shipping Solutions</h3>
                     <p>
-                      At Ostro, we prioritize lasting connections. Our tile
-                      adhesive offers superior grip, ensuring tiles stay firmly
-                      in place for years — even in high-moisture and
-                      heavy-traffic areas.
+                      Whether it's bulk cargo, containers, or fragile goods, Sea
+                      Clouds tailors solutions to match your business needs —
+                      across sea, land, or multimodal logistics.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -414,12 +407,11 @@ const About = () => {
                     <i className="flaticon-gift-box" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Easy Application, Smooth Finish</h3>
+                    <h3 className="title">Real-Time Tracking & Transparency</h3>
                     <p>
-                      No more messy installations. Ostro adhesives spread
-                      effortlessly, offering excellent workability for both
-                      professionals and DIYers — leaving behind a flawless
-                      finish every time.
+                      Stay in control. With our advanced tracking system,
+                      monitor your shipment’s journey in real-time — no
+                      surprises, just clarity.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -436,11 +428,11 @@ const About = () => {
                     <i className="flaticon-laptop" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Versatile Compatibility</h3>
+                    <h3 className="title">Reliable Global Delivery</h3>
                     <p>
-                      Whether you're working with ceramic, vitrified, porcelain,
-                      or natural stone, Ostro's formula bonds seamlessly with
-                      various tile types and surfaces.
+                      From ports to doorsteps, Sea Clouds ensures your cargo
+                      reaches any corner of the world — safely, securely, and
+                      always on schedule.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -457,13 +449,11 @@ const About = () => {
                     <i className="flaticon-headphone" />
                   </div>
                   <div className="content">
-                    <h3 className="title">
-                      Professional Grade. Trusted by Experts
-                    </h3>
+                    <h3 className="title">Trusted by Industry Leaders</h3>
                     <p>
-                      Chosen by architects, builders, and contractors across the
-                      country — Ostro is the name professionals trust when only
-                      strength will do.
+                      From local exporters to global enterprises — businesses
+                      trust Sea Clouds for efficient, dependable, and
+                      cost-effective logistics.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -493,11 +483,11 @@ const About = () => {
                 <div className="features-content-box features-content-box-one">
                   <div className="section-title section-title-left mb-30 wow fadeInUp">
                     <span className="sub-title">Our Speciality</span>
-                    <h2>Experience Tiling Like Never Before</h2>
+                    <h2>Experience Shipping Like Never Before</h2>
                   </div>
                   <h5>
-                    Enjoy superior grip, lasting durability, and flawless finish
-                    with Ostro Tile Adhesives.
+                    Enjoy smooth logistics, timely deliveries, and global
+                    reliability with Sea Cloud Shipping Service.
                   </h5>
                   <ul className="features-list-one">
                     <li
@@ -508,10 +498,11 @@ const About = () => {
                         <i className="flaticon-find" />
                       </div>
                       <div className="content">
-                        <h5>Bond with Strength, Built to Last</h5>
+                        <h5>On-Time, Every Time</h5>
                         <p>
-                          Experience unmatched durability and grip with Ostro
-                          Tile Adhesives – engineered for ultimate performance.
+                          We prioritize punctuality with efficient route
+                          planning and real-time tracking for dependable
+                          shipping schedules.
                         </p>
                       </div>
                     </li>
@@ -523,10 +514,11 @@ const About = () => {
                         <i className="flaticon-social-care" />
                       </div>
                       <div className="content">
-                        <h5>Perfect Fit, Every Time</h5>
+                        <h5>Global Coverage, Local Care</h5>
                         <p>
-                          From kitchens to commercial spaces, find the right
-                          adhesive for every tile, surface, and style.
+                          From major ports to remote destinations, our network
+                          ensures your cargo gets where it needs to go—with
+                          personalized service at every touchpoint.
                         </p>
                       </div>
                     </li>
@@ -538,10 +530,11 @@ const About = () => {
                         <i className="flaticon-place" />
                       </div>
                       <div className="content">
-                        <h5>Smart & Easy Application</h5>
+                        <h5>Safe & Secure Transport</h5>
                         <p>
-                          User-friendly formulas and guided instructions make
-                          installation quick, clean, and stress-free.
+                          Your cargo is protected with advanced safety
+                          protocols, experienced crew, and strict quality
+                          control from dock to door.
                         </p>
                       </div>
                     </li>
@@ -553,10 +546,10 @@ const About = () => {
                         <i className="flaticon-social-care" />
                       </div>
                       <div className="content">
-                        <h5>24/7 Expert Support</h5>
+                        <h5>24/7 Customer Support</h5>
                         <p>
-                          Need advice or technical help? Our specialists are
-                          just a call or click away, anytime.
+                          Questions? Updates? Our logistics team is always
+                          ready—around the clock, around the world.
                         </p>
                       </div>
                     </li>
@@ -569,10 +562,11 @@ const About = () => {
                 <div className="content">
                   <h5>Our Vision</h5>
                   <p>
-                    To redefine the foundation of modern living spaces by
-                    delivering strong, reliable, and innovative tile adhesive
-                    solutions—empowering every home and structure with lasting
-                    strength, seamless beauty, and enduring confidence.
+                    To provide the highest level of services in a transparent &
+                    cost-effective manner to our customers, in order to build a
+                    trustworthy and long-lasting relationship & committed to
+                    service excellence and renowned for our integrity and
+                    ability to deliver.
                   </p>
                 </div>
               </div>
@@ -580,15 +574,9 @@ const About = () => {
                 <div className="content">
                   <h5>Our Mission</h5>
                   <p>
-                    At Ostro, our mission is to build strength from the ground
-                    up—by providing high-performance tile adhesives that ensure
-                    lasting durability, precision, and confidence in every bond.
-                    We are committed to setting new benchmarks in quality and
-                    reliability through advanced formulations, sustainable
-                    solutions, and a deep understanding of our customers’ needs.
-                    With "Strength" at our core, we aim to support every
-                    project—from homes to high-rises—with unwavering integrity
-                    and innovation.
+                    “Destined Your Desire” To provide the highest quality
+                    service to our customers by continuously increasing cost
+                    efficiency and maintaining the real time delivery deadlines.
                   </p>
                 </div>
               </div>
@@ -634,25 +622,25 @@ const About = () => {
                 }}
               >
                 <h2 style={{ textAlign: "center" }}>
-                  Experience Unmatched Bonding Strength
+                  Experience Unmatched Shipping Reliability
                 </h2>
                 <p style={{ textAlign: "center" }}>
-                  Premium tile adhesive solutions offering superior grip,
-                  long-lasting durability, and seamless finish — built to
-                  transform your surfaces with perfection that lasts.
+                  Premium logistics and cargo solutions offering global reach,
+                  timely deliveries, and secure handling — built to move your
+                  world with precision and trust that sails beyond borders.
                 </p>
                 <a
                   onClick={() => {
-                    const link = document.createElement("a");
-                    link.href = "/assets/images/Ostro-Company Profile.pdf";
-                    link.download = "Plixon-Catalogue-Digital.pdf"; // Optional: Specify the file name
-                    link.click();
+                    // const link = document.createElement("a");
+                    // link.href = "/assets/images/Ostro-Company Profile.pdf";
+                    // link.download = "Sea-Cloud-Shipping-Company.pdf"; // Optional: Specify the file name
+                    // link.click();
                   }}
                   className="main-btn"
                   style={{
                     display: "inline-block",
                     padding: "10px 20px",
-                    backgroundColor: "#B62025",
+                    backgroundColor: "#00ADEE",
                     color: "#FFF",
                     textDecoration: "none",
                     borderRadius: "5px",
@@ -704,7 +692,7 @@ const About = () => {
             className="newsletter-wrapper newsletter-wrapper-one bg_cover"
             style={{
               // backgroundImage: "url(assets/images/bg/newsletter-bg-1.jpg)",
-              backgroundColor: "#B62025",
+              backgroundColor: "#00ADEE",
               opacity: "0.8",
             }}
           >
@@ -745,8 +733,7 @@ const About = () => {
                     <button
                       className="main-btn"
                       style={{
-                        backgroundColor: "#B62025",
-                        border: "2px solid #4D4E4E",
+                        backgroundColor: "#040468",
                       }}
                       onClick={() => {
                         const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
@@ -760,7 +747,7 @@ const About = () => {
                               document.getElementById("whatsappMessage").value;
                             const encodedMessage = encodeURIComponent(message);
                             // Replace with your actual WhatsApp number (with country code, remove +)
-                            const whatsappNumber = "919942500600";
+                            const whatsappNumber = "918200397854";
                             window.open(
                               `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
                               "_blank"

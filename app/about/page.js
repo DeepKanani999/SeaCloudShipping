@@ -383,7 +383,12 @@ const About = () => {
                   data-wow-delay="10ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-add-user" />
+                    {/* <i className="flaticon-add-user" /> */}
+                    <img
+                      src="/assets/images/about-us/about_flexibleshipping.svg"
+                      alt="star-fill"
+                      style={{ height: "50px", width: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Flexible Shipping Solutions</h3>
@@ -404,7 +409,12 @@ const About = () => {
                   data-wow-delay="20ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-gift-box" />
+                    {/* <i className="flaticon-gift-box" /> */}
+                    <img
+                      src="/assets/images/about-us/about_realtimetracking&trans.svg"
+                      alt="star-fill"
+                      style={{ height: "50px", width: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Real-Time Tracking & Transparency</h3>
@@ -425,7 +435,12 @@ const About = () => {
                   data-wow-delay="30ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-laptop" />
+                    {/* <i className="flaticon-laptop" /> */}
+                    <img
+                      src="/assets/images/about-us/about_reliableglobal.svg"
+                      alt="star-fill"
+                      style={{ height: "50px", width: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Reliable Global Delivery</h3>
@@ -446,7 +461,12 @@ const About = () => {
                   data-wow-delay="40ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-headphone" />
+                    {/* <i className="flaticon-headphone" /> */}
+                    <img
+                      src="/assets/images/about-us/about_trustedbyindustry.svg"
+                      alt="star-fill"
+                      style={{ height: "50px", width: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Trusted by Industry Leaders</h3>
@@ -495,7 +515,12 @@ const About = () => {
                       data-wow-delay="10ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-find" />
+                        {/* <i className="flaticon-find" /> */}
+                        <img
+                          src="/assets/images/about-us/about2_ontimeeverytime.svg"
+                          alt="star-fill"
+                          style={{ height: "40px", width: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>On-Time, Every Time</h5>
@@ -511,7 +536,12 @@ const About = () => {
                       data-wow-delay="30ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-social-care" />
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/about2_globalcoverage.svg"
+                          alt="star-fill"
+                          style={{ height: "40px", width: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>Global Coverage, Local Care</h5>
@@ -527,7 +557,12 @@ const About = () => {
                       data-wow-delay="20ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-place" />
+                        {/* <i className="flaticon-place" /> */}
+                        <img
+                          src="/assets/images/about-us/about2_safe&secure.svg"
+                          alt="star-fill"
+                          style={{ height: "40px", width: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>Safe & Secure Transport</h5>
@@ -543,7 +578,12 @@ const About = () => {
                       data-wow-delay="30ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-social-care" />
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/about2_24by7customersupport.svg"
+                          alt="star-fill"
+                          style={{ height: "40px", width: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>24/7 Customer Support</h5>

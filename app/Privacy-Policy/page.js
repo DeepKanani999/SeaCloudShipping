@@ -429,7 +429,7 @@ const PrivacyPolicy = () => {
               </li>
               <li>
                 <strong>Company</strong> (referred to as either "the Company",
-                "We", "Us" or "Our" in this Agreement) refers to Ostro, FP No -
+                "We", "Us" or "Our" in this Agreement) refers to seacloudshipping, FP No -
                 274, TP No - 229, Nr. Shilpgram I, Gate No - 2, Jaspur, Kalol,
                 Gandhinagar, 382721. Gujarat.
               </li>
@@ -469,9 +469,9 @@ const PrivacyPolicy = () => {
                 duration of a page visit).
               </li>
               <li>
-                <strong>Website</strong> refers to Ostro, accessible from{" "}
-                <a href="www.ostrocemex.com" style={{ color: "#007bff" }}>
-                  www.ostrocemex.com
+                <strong>Website</strong> refers to seacloudshipping, accessible from{" "}
+                <a href="www.seacloudshipping.com" style={{ color: "#007bff" }}>
+                  www.seacloudshippingcemex.com
                 </a>
               </li>
               <li>

@@ -1358,7 +1358,11 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌍</span>
+                          <img
+                            src="/assets/images/home-about-us/home_globalreach.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Global Reach, Local Expertise</h6>
@@ -1372,7 +1376,11 @@ const HomeScreen = () => {
                             className="ti-volume"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>✅</span>
+                          <img
+                            src="/assets/images/home-about-us/home_transparentpricing.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Transparent Pricing, Trusted Delivery</h6>
@@ -1386,7 +1394,11 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🔄</span>
+                          <img
+                            src="/assets/images/home-about-us/home_endtoend.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>End-to-End Efficiency</h6>
@@ -1400,7 +1412,11 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🤝</span>
+                          <img
+                            src="/assets/images/home-about-us/home_builtontrust.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Built on Trust, Driven by Excellence</h6>
@@ -1414,7 +1430,11 @@ const HomeScreen = () => {
                             className="ti-volume"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>📦</span>
+                          <img
+                            src="/assets/images/home-about-us/home_smartshipping.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Smart Shipping Solutions</h6>
@@ -1428,7 +1448,11 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#00ADEE" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🚛</span>
+                          <img
+                            src="/assets/images/home-about-us/home_consistentcare.svg"
+                            alt="Call"
+                            style={{ height: "20px", width: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Consistent Care, Every Container</h6>
@@ -1505,9 +1529,7 @@ const HomeScreen = () => {
                             className="title"
                             style={{ marginBottom: "15px" }}
                           >
-                            <Link
-                              href={`/product-details/${product.slug}`}
-                            >
+                            <Link href={`/product-details/${product.slug}`}>
                               {product.name}
                             </Link>
                           </h5>
@@ -1739,7 +1761,7 @@ const HomeScreen = () => {
                             marginLeft: "5px",
                           }}
                         >
-                          99425 00600
+                          8200397854
                         </strong>
                       </a>
                     </div>
@@ -1810,10 +1832,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1864,10 +1886,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1918,10 +1940,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>

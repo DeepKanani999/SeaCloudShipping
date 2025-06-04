@@ -412,7 +412,7 @@ const TermsAndConsition = () => {
                 <strong>Country</strong> refers to: Gujarat, India
               </li>
               <li>
-                <strong>Company</strong> refers to Ostro, FP No - 274, TP No -
+                <strong>Company</strong> refers to seacloudshipping, FP No - 274, TP No -
                 229, Nr. Shilpgram I, Gate No - 2, Jaspur, Kalol, Gandhinagar,
                 382721. Gujarat.
               </li>
@@ -429,12 +429,12 @@ const TermsAndConsition = () => {
                 Company regarding the use of the Service.
               </li>
               <li>
-                <strong>Website</strong> refers to Ostro, accessible from{" "}
+                <strong>Website</strong> refers to seacloudshipping, accessible from{" "}
                 <a
-                  href="http://www.ostrocemex.com"
+                  href="http://www.seacloudshipping.com"
                   style={{ color: "#007bff" }}
                 >
-                  www.ostrocemex.com
+                  www.seacloudshippingcemex.com
                 </a>
               </li>
               <li>
